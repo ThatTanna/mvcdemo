@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit a Customer</title>
+</head>
+<body>
+    <!-- <form action="/saveCustomer" method="post">
+
+        <p>First Name: <input name="first" value="${customer.first}"/></p>
+        <p>Last Name: <input name="last" value="${customer.last}"/></p>
+        <p>Phone Number: <input name="phone" value="${customer.phone}"/></p>
+
+        <input type="submit" value="Add Customer">
+
+    </form> -->
+    <form action="#"
+        data-th-action="@{/saveCustomer}"
+        data-th-object="${customer}"
+        method="post">
+
+        <p>First Name: <input type="text" placeholder="First name here" data-th-value="${customer.first}"></p>
+        <p>Last Name: <input type="text" placeholder="Last name here" data-th-value="${customer.last}"></p>
+        <p>Phone Number: <input type="text" placeholder="Phone Number" data-th-value="${customer.phone}"></p>
+
+        <input type="submit" value="Add Customer"/>
+    </form>
+</body>
+</html>

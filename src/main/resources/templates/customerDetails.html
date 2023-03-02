@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Details</title>
+</head>
+<body>
+        <p data-th-text="${customer.first + ' ' + customer.last}">Customer: </p>
+        <!-- <p>Customer: <span data-th-text="${customer.first + ' ' + customer.last}"></span></p> -->
+        <p data-th-text="${customer.phone.areaCode} + '-' + ${customer.phone.prefix} + '-' + ${customer.phone.number}">Phone: </p>
+        <!-- <p>Phone: <span data-th-text="${customer.phone.areaCode} + '-' + ${customer.phone.prefix} + '-' + ${customer.phone.number}"></span></p> -->
+
+    <!-- <p>Phone type: <span th:text="${customer.phone.getClass().getName()}"></span></p> -->
+    <!-- <p>Phone properties: <span data-th-text="${customer.phone.areaCode}"></span> <span data-th-text="${customer.phone.prefix}"></span> <span data-th-text="${customer.phone.number}"></span></p> -->
+    <!-- <p>Name: <span th-text="(${customer.first} ${customer.last}>)"></span></p>
+    <p>Phone Number: <span th-text="${customer.phone.areaCode} - ${customer.phone.prefix} - ${customer.phone.number}"></span></p> -->
+
+</body>
+</html>
